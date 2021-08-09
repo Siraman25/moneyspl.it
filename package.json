@@ -1,0 +1,26 @@
+{
+  "name": "moneyspl.it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch:all",
+    "watch:all": "concurrently \"npm run watch:scss\" \"npm run server\"",
+    "server": "node index.js",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "scss": "sass --watch css:css"
+  },
+  "keywords": [],
+  "author": "Aris Mandolini",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "bootstrap-icons": "^1.5.0"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "onchange": "^7.1.0",
+    "concurrently": "^6.2.1",
+    "sass": "^1.37.5"
+  }
+}
