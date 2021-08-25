@@ -8,19 +8,29 @@
     "watch:all": "concurrently \"npm run watch:scss\" \"npm run server\"",
     "server": "node index.js",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
-    "scss": "sass --watch css:css"
+    "scss": "sass --watch css:css",
+    "devStart": "nodemon server.js"
   },
   "keywords": [],
   "author": "Aris Mandolini",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "bootstrap": "^5.1.0",
-    "bootstrap-icons": "^1.5.0"
+    "bootstrap-icons": "^1.5.0",
+    "ejs": "^3.1.6",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "express": "^4.17.1",
-    "onchange": "^7.1.0",
     "concurrently": "^6.2.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "onchange": "^7.1.0",
     "sass": "^1.37.5"
   }
 }
